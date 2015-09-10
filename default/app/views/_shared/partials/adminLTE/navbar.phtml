@@ -1,0 +1,35 @@
+<header class="main-header">
+  <!-- Logo -->
+  <a href="#" class="logo"><b>Imgur</b></a>
+  <!-- Header Navbar: style can be found in header.less -->
+  <nav class="navbar navbar-static-top" role="navigation">
+    <!-- Sidebar toggle button-->
+    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <span class="sr-only"></span>
+    </a>
+    <!-- Navbar Right Menu -->
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+      </ul>
+    </div>
+    <?php echo Form::openMultipart("gestorimagenes/create/", "enctype='multipart/form-data' id='form01'"); ?>
+      <div class="row">
+        <div class="col-md-2">
+          <input type="file" name="imagen" id="imagen" accept="image/">
+        </div>
+        <div class="col-md-2">
+            <?= Form::button('Upload Image',"title='Upload Image' onclick = 'subirimagen(this)' class='btn
+            btn-success'") ?>
+<!--          --><?php //echo Form::submit('Upload Image', "id='botonadd' class= 'btn btn-success' ") ?>
+        </div>
+        <div class="col-md-3">
+          <?= Form::text('sesion.descripcion', "size=10 maxlength=250 placeholder='buscar'
+          class='form-control'") ?>
+          </div>
+          <div class="col-md-1">
+          <?= Form::button('Buscar',"title='Empezar' onclick = 'carga()' class='btn btn-info'") ?>
+        </div>
+      </div>
+    <?php echo Form::close() ?>
+  </nav>
+</header>
