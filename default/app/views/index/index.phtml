@@ -6,21 +6,9 @@
         $privez=true;?>
         <?php foreach($imagenes as $imagen): ?>
 
-            <div class="col-2" style="padding: 30px"><img class="img-rounded" src="<?php echo str_replace('/public/','',$imagen->direc_fisica); ?>" style="width:100%;height: 130px" ></div>
+
+            <div class="col-md-2" style="padding: 30px"><img class="img-rounded" src="<?php echo str_replace('/public/','',$imagen->nombre); ?>" style="width:100%;height: 130px" ></div>
 
         <?php endforeach; ?>
     </div>
 </div>
-<script>
-    function subirimagen(obj){
-        nombre = obj.value;
-        $.ajax({
-            type: "POST",
-            url: "<?php echo PUBLIC_PATH ?>"+"gestorimagen/create/"+nombre,
-            success: function(html)
-            {
-                $("#resultadoajax").html(html);
-            }
-        });
-    }
-</script>

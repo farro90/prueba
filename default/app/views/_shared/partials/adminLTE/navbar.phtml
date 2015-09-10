@@ -18,16 +18,15 @@
           <input type="file" name="imagen" id="imagen" accept="image/">
         </div>
         <div class="col-md-2">
-            <?= Form::button('Upload Image',"title='Upload Image' onclick = 'subirimagen(this)' class='btn
-            btn-success'") ?>
-<!--          --><?php //echo Form::submit('Upload Image', "id='botonadd' class= 'btn btn-success' ") ?>
+
+            <?php echo Form::submit('Upload Image', "id='botonadd' class= 'btn btn-success' ") ?>
         </div>
         <div class="col-md-3">
           <?= Form::text('sesion.descripcion', "size=10 maxlength=250 placeholder='buscar'
           class='form-control'") ?>
           </div>
           <div class="col-md-1">
-          <?= Form::button('Buscar',"title='Empezar' onclick = 'carga()' class='btn btn-info'") ?>
+          <?= Form::button('Buscar',"title='Empezar' onclick = 'buscar()' class='btn btn-info'") ?>
         </div>
       </div>
     <?php echo Form::close() ?>

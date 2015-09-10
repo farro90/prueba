@@ -53,6 +53,15 @@ define('APP_PATH', dirname(dirname(__FILE__)) . '/app/');
 define('CORE_PATH', dirname(dirname(APP_PATH)) . '/core/');
 
 /**
+ * Define el IMG_PATH
+ *
+ * IMG_PATH:
+ * - Ruta al directorio que contiene las imagenes subidas
+ */
+define('APP_IMGS', dirname(dirname(__FILE__)). '/public/img/upload/imagenes/');
+define('APP_IMAGES', '/public/img/upload/imagenes/');
+
+/**
  * Define el PUBLIC_PATH
  *
  * PUBLIC_PATH:
